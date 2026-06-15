@@ -8,12 +8,12 @@ Small payments service. Exposes `POST /charges` (idempotent), `GET /charges/{id}
 dotnet run
 ```
 
-The API listens on `http://localhost:5000` (or whatever ASP.NET defaults to).
+The API listens on `http://localhost:5010` (or whatever ASP.NET defaults to).
 
 ## Quick smoke test
 
 ```bash
-curl -X POST http://localhost:5000/charges \
+curl -X POST http://localhost:5010/charges \
   -H "Content-Type: application/json" \
   -d '{"idempotencyKey":"k1","amount":12.50,"currency":"USD","customerEmail":"a@b.com","cardToken":"tok_visa"}'
 ```
